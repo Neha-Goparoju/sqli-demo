@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>SQL Injection Demo Login</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <h2>Login Page</h2>
+
+    <form action="/login" method="post">
+
+        <label>Username</label>
+        <input type="text" name="username" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <!-- Show result ONLY after login -->
+
+    <div class="result-box" th:if="${message != null}">
+
+        <p><b>Entered Username:</b>
+            <span th:text="${enteredUsername}"></span>
+        </p>
+
+        <p><b>Entered Password:</b>
+            <span th:text="${enteredPassword}"></span>
+        </p>
+
+        <p>
+            <b>Message:</b>
+            <span th:text="${message}"></span>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
