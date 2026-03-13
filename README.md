@@ -18,10 +18,15 @@ This project demonstrates how SQL Injection attacks work in a vulnerable login s
 
 ## Example SQL Injection Payloads Tested
 admin' --
+
 admin' OR '1'='1
+
 admin' #
+
 admin" OR "1"="1
+
 admin' UNION SELECT 1,2 --
+
 admin' OR SLEEP(5) --
 
 The system successfully detects these payloads and prevents authentication bypass.
